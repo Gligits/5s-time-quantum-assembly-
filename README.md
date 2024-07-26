@@ -40,5 +40,5 @@ Ce programme continuera de tourner sans s’arrêter et exécutera une tache cha
     tache3 en cours d"execution....
     tache4 en cours d"execution....
 
-
+PS: TACHE1_5 et TACHE2_5 sont des modifications des deux programmes pour que chacun deux s'arrête après 5 min d'exécution
 
