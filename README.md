@@ -1,16 +1,12 @@
 # 5s-time-quantum-assembly-
-
-## Deffinition de l'interruption  1CH : Tic d'horloge
-Cette interruption est appelé par le BIOS à chaque tic de l'horloge interne de l'ordinateur, soit à tous les 18,2064819336 fois par secondes.
+Definition of interruption 1CH: Clock tick
+This interruption is called by the BIOS at each tick of the computer's internal clock, which occurs approximately 18.2064819336 times per second.
 
 ## _TACHE1_ : 
-Est un programme MODULAIRE qui permet à l’aide de l’interruption 1CH, de provoquer la suspension du programme principal en cours d’exécution et l’exécution
-toutes les secondes d’une procédure qui affichera le message suivant ‘1 sec écoulée ......’.
-Le programme principal affiche sur l’écran le message répété ‘Début du quantum de temps logiciel’. 
-Le délai entre deux messages consécutifs est fixé par par 2 boucles imbriquées insérées dans le programme principal.
-Ce programme continuera de tourner sans s’arrêter, et le message ‘1 sec écoulée....’ sera affiché chaque seconde.
+This is a MODULAR program that, using interruption 1CH, suspends the currently running main program and executes a procedure every second that will display the following message: '1 sec écoulée......'. The main program repeatedly displays the message 'Début du quantum de temps logiciel' on the screen. The delay between two consecutive messages is set by two nested loops inserted in the main program. This program will continue to run without stopping, and the message '1 sec écoulée....' will be displayed every second.
 
-                                                         Affichage du programme complilé : 
+
+                                                         output : 
 
     **** Début du quantum de temps logiciel **** 1 sec écoulée...... 1 sec écoulée...... 1 sec écoulée...... 1 sec écoulée...... 1 sec écoulée...... 1
     sec écoulée...... 1 sec écoulée..... 1 sec écoulée... 1 sec écoulée...... 1 sec écoulée...... 1 sec écoulée...... 1 sec écoulée...... 1 sec écoulée...... 1
@@ -20,17 +16,17 @@ Ce programme continuera de tourner sans s’arrêter, et le message ‘1 sec éc
     sec écoulée...... 1 sec écoulée...... 1 sec écoulée.... 1 sec écoulée....... 1 sec écoulée...... 1 sec écoulée...... 1 sec écoulée......
 
 ## _TACHE2_ : 
-Est un programme MODULAIRE qui permet à l’aide de l’interruption périodique 1CH d’interrompre le programme principal en cours d’exécution , de lancer toutes les cinq secondes
-une tache parmi 4 taches dans l’ordre suivant : tache1, tache2, tache3 , tache4.
-Chaque tache se charge seulement d’afficher son propre message :
-Message de la tache 1 : ‘Tache 1 est en cours d’exécution....’
-Message de la tache 2 : ‘Tache 2 est en cours d’exécution....’
-Message de la tache 3 : ‘Tache 3 est en cours d’exécution....’
-Message de la tache 4 : ‘Tache 4 est en cours d’exécution....’
+This is a MODULAR program that, using periodic interruption 1CH, interrupts the currently running main program and launches one of four tasks every five seconds in the following order: task1, task2, task3, task4.  
+Each task is only responsible for displaying its own message :
+Task 1 message : ‘Tache 1 est en cours d’exécution....’
+Task 2 message : ‘Tache 2 est en cours d’exécution....’
+Task 3 message : ‘Tache 3 est en cours d’exécution....’
+Task 4 message : ‘Tache 4 est en cours d’exécution....’
 
-Ce programme continuera de tourner sans s’arrêter et exécutera une tache chaque 5 secondes.
+This program will continue to run without stopping and will execute a task every 5 seconds.
 
-                                                          Affichage du programme complilé : 
+
+                                                         output : 
     tache1 en cours d"execution....
     tache2 en cours d"execution....
     tache3 en cours d"execution....
@@ -40,5 +36,4 @@ Ce programme continuera de tourner sans s’arrêter et exécutera une tache cha
     tache3 en cours d"execution....
     tache4 en cours d"execution....
 
-PS: TACHE1_5 et TACHE2_5 sont des modifications des deux programmes pour que chacun deux s'arrête après 5 min d'exécution
-
+PS: TACHE1_5 et TACHE2_5 are modifications of the two programs so that each of them stops after 5 minutes of execution.
